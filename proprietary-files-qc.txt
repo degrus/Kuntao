@@ -228,9 +228,9 @@ vendor/lib64/vendor.display.color@1.0.so|0316423c6bf2f4af29c005f59ccd4a6924d1e00
 vendor/lib64/vendor.display.color@1.1.so|2c31ab8c795a6684a01c2a330f5e2942d34ed622
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|12674982b974c4121467564b60bd966c6d884662
 
-# Graphics vulkan - from tissot 8.1.0 OPM1.171019.026
-vendor/lib/hw/vulkan.msm8953.so
-vendor/lib64/hw/vulkan.msm8953.so
+# Graphics (Vulkan) - from marlin - PPR2.180905.006
+vendor/lib/hw/vulkan.msm8953.so|1e62d0727748c40269f7cb6b432bd03b56c7323d
+vendor/lib64/hw/vulkan.msm8953.so|1297229c8109c218737c9493b00a6904ce62c06b
 
 # IPA
 bin/ipacm-diag:vendor/bin/ipacm-diag
