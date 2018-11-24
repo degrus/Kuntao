@@ -91,6 +91,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
+# Fp Gestures
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fp.navigation=1
+
 # Factory reset protection
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/7824900.sdhci/by-name/config
