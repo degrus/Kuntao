@@ -1,7 +1,6 @@
 #
 # system.prop for kuntao
 #
-
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
@@ -13,9 +12,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
     ro.vendor.audio.sdk.fluencetype=none \
-    vendor.audio.dolby.ds2.enabled=true \
     vendor.audio_hal.period_size=192 \
     vendor.audio.hw.aac.encoder=true \
+    vendor.audio.dolby.ds2.enabled=true \
     vendor.audio.offload.buffer.size.kb=64 \
     vendor.audio.offload.gapless.enabled=true \
     vendor.audio.offload.multiaac.enable=true \
@@ -36,6 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    camera.hal1.packagelist=com.skype.raider,com.android.facelock,com.whatsapp,com.google.android.talk \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     vidc.enc.dcvs.extra-buff-count=2 \
@@ -55,15 +55,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
+# Hwui
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hwui.texture_cache_size=72 \
+    ro.hwui.layer_cache_size=48 \
+    ro.hwui.path_cache_size=32 \
+    ro.hwui.gradient_cache_size=1 \
+    ro.hwui.drop_shadow_cache_size=6 \
+    ro.hwui.r_buffer_cache_size=8 \
+    ro.hwui.texture_cache_flushrate=0.4 \
+    ro.hwui.text_small_cache_width=1024 \
+    ro.hwui.text_small_cache_height=1024 \
+    ro.hwui.text_large_cache_width=2048 \
+    ro.hwui.text_large_cache_height=1024
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.hwc.enable_vds=1 \
+    debug.sf.hw=0 \
+    debug.egl.hw=0 \
+    persist.hwc.mdpcomp.enable=true \
+    debug.mdpcomp.logs=0 \
+    dev.pm.dyn_samplingrate=1 \
+    persist.demo.hdmirotationlock=false \
+    debug.enable.sglscale=1 \
     debug.gralloc.enable_fb_ubwc=1 \
     ro.opengles.version=196610 \
     ro.vendor.display.cabl=0 \
-    ro.sf.lcd_density=480 \
-    vendor.display.disable_rotator_downscale=1 \
-    sdm.debug.disable_skip_validate=1 \
-    sdm.perf_hint_window=50
+    ro.sf.lcd_density=480
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -73,9 +92,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/7824900.sdhci/by-name/config
 
-# Fp Gestures
+# Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.fp.navigation=1
+    log.tag.synaFpHal=W \
+    log.tag.SynapticsLIB=W \
+    log.tag.synaTransport=W
+
+# Charger
+PRODUCT_PROPERTY_OVERRIDES += \
+    log.tag.smart_charger=W
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -93,6 +118,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-scan=true \
+    media.msm8956hw=0 \
+    mm.enable.smoothstreaming=true \
+    mmp.enable.3g2=true \
+    media.aac_51_output_enabled=true \
     media.stagefright.audio.sink=280 \
     vendor.vidc.dec.downscalar_width=1920 \
     vendor.vidc.dec.downscalar_height=1088 \
@@ -132,12 +167,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
     persist.data.netmgrd.qos.enable=true \
+    persist.radio.aosp_usr_pref_sel=true \
     persist.data.mode=concurrent
-
-# Fling velocities
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.min.fling_velocity=160 \
-    ro.max.fling_velocity=20000
 
 # RescueParty
 PRODUCT_PROPERTY_OVERRIDES += \
