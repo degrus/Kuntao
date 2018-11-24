@@ -249,7 +249,6 @@ vendor/etc/sound_trigger_platform_info.xml
 # Media - from Nokia 7 Plus - WW_3_190
 -vendor/lib/libgpustats.so|cb8b3024291ffb97a5621218a18f757ee0d77c02
 -vendor/lib64/libgpustats.so|d5cbfaf117fafaf595bb0e66214d80f6f652c964
-lib/libstagefright_soft_flacdec.so|5a8d861837a217ab26939b861966be2783c0aa88
 vendor/lib/libAlacSwDec.so|a60f990030400c8d75b39bad16251e8108bb2473
 vendor/lib/libApeSwDec.so|9d5b4f3fbd633b51c5396070cfcee6028f5a3fb8
 vendor/lib/libFlacSwDec.so|42f9a5acc85a48693304dc731f17424eba4cb610
