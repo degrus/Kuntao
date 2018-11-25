@@ -92,6 +92,9 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 # CNE | DPM
 BOARD_USES_QCNE := true
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := false
+
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)

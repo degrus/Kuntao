@@ -14,6 +14,14 @@
 # limitations under the License.
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor/bin/move_widevine_data.sh)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor/bin/hw/android.hardware.drm@1.1-service.widevine)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor/etc/init/android.hardware.drm@1.1-service.clearkey.rc)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor/etc/init/android.hardware.nfc@1.0-service.rc)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor/etc/libnfc-brcm-20797b00.conf)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor/etc/libnfc-nci.conf)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor/lib64/libwvhidl.so)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -359,7 +367,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    libwpa_client \
+    libwpa_client
 
 PRODUCT_PACKAGES += \
     hostapd \
